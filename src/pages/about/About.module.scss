@@ -1,0 +1,68 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.section{
+    margin-top: 100px;
+    padding: 0 80px;
+
+    .title__highlight{
+       @include titleSection($blacklightColor)
+    }
+    h2{
+        font-size: 30px;
+        margin: 20px 0;
+    }
+    
+    .image__wrapper{
+        width: 100%;
+        position: relative;
+        transition: all 0.3s;
+        img{
+            width: 100%;
+            height: 550px;
+            opacity: 1;
+            transition: 0.5s;
+        }
+        a{
+            padding: 11px 40px;
+            margin: 15px 0;
+            font-size: 14px;
+            transition: all .3s ease;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.5s;
+            opacity: 0;
+            cursor: pointer;
+            &:hover{
+                letter-spacing: 1.5px;
+            }
+        }
+        &:hover img{
+            opacity: 0.5;
+        }
+        &:hover a{
+            opacity: 1;
+        }
+    }
+    .about__title{
+        line-height: 2;
+        padding: 12px 0;
+        border-bottom: 1px solid;
+        h4{
+            font-size: 1.5rem;
+        }
+    }
+    .about__text{
+        line-height: 2;
+        padding: 12px 0;
+        word-spacing: 5px;
+        text-align: justify;
+    }
+}
+@include media(M){
+    .section{
+       padding: 0 20px;
+    }
+ }

@@ -1,0 +1,74 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+a { color: inherit; } 
+.btn-mode {
+  @include btn(rgba(0, 0, 0, .1), 50px, 50%);
+  font-size: 1.3rem;
+  border: none;
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  position: fixed;
+  right: 25px;
+  top: 25px;
+}
+
+// theme
+.light {
+  .text {
+    color: $blacklightColor;
+  }
+  .bgaside {
+    background-color: $whiteColor;
+  }
+  .bgmain {
+    background-color: $bgColor;
+  }
+  &.bgaside {
+    background-color: $whiteColor;
+  }
+  &.bgmain {
+    background-color: $bgColor;
+  }
+}
+.dark {
+  .text {
+    color: $whiteColor;
+  }
+  .bgaside {
+    background-color: $blackmainColor;
+  }
+  .bgmain {
+    background-color: $blackdarkColor;
+  }
+  &.bgaside {
+    background-color: $blackmainColor;
+  }
+  &.bgmain {
+    background-color: $blackdarkColor;
+  }
+}
+
+// vertical in about us page
+.vertical-timeline{
+  direction: ltr;
+  margin: 0;
+  width: 99%;
+  max-width: 99%;
+  padding:20px 10px;
+  overflow: hidden;
+}
+.vertical-timeline::before{
+  top: 32px;
+  left: 28px;
+  height: 80%;
+}
+
+// responsive
+@include media(M){
+  .section{
+     padding: 0 25px;
+  }
+}

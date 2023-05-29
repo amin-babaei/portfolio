@@ -1,0 +1,36 @@
+@mixin textStyle($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+@mixin btn($bgColor, $width, $radius){
+    background-color: $bgColor;
+    width: $width;
+    border-radius: $radius;
+    cursor: pointer;
+    outline: none;
+}
+@mixin flexDisplay($justify,$align,$direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+@mixin titleSection($bgcolor){
+    padding: 10px;
+    color: white;  
+    background-color: $bgcolor;
+    width: max-content;
+    font-size: 13px;
+}
+@mixin media($size) {
+    @if ($size == M) {
+        @media (max-width:850px) {
+            @content;
+        }
+    } @else if ($size == L) {
+        @media (min-width:850px) and (max-width: 1050px) {
+            @content;
+        }
+    }
+}
