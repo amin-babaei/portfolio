@@ -64,5 +64,9 @@
 @include media(M){
     .section{
        padding: 0 20px;
+      
+        img{
+            height: 400px !important;
+        }
     }
  }
