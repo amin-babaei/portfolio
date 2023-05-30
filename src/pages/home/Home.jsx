@@ -21,7 +21,7 @@ const Home = ({helmetTitle}) => {
             <a href="mailto:aminbabaei_dev@yahoo.com">
               <AiFillYahoo size={30} />
             </a>
-            <a href="https://www.linkedin.com/in/amin-babaei-157953259/">
+            <a href="https://www.linkedin.com/in/amin-babaei">
               <AiFillLinkedin size={30} />
             </a>
           </div>
