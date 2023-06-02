@@ -14,7 +14,7 @@ import back from '@/assets/back.png'
 export const realSamples = [
     {
         id:'1',
-        title:"دیوار",
+        title:"دیوار ( نیاز به vpn )",
         desc:"توسعه داده شده با : react js _ tailwindcss _ socket.io _ formik _ yup _ react-query _ react-google-recaptcha _ express",
         img:divar,
         href:'https://amindivar.vercel.app',
