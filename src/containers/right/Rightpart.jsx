@@ -1,6 +1,5 @@
 import { useCallback, useEffect,useState,useContext } from "react";
-import { BsFillMoonStarsFill, BsPersonFill, BsFileCodeFill, BsFillSunFill } from "react-icons/bs";
-import { IoMdHome, IoIosCall } from "react-icons/io";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { AiOutlineMenuFold } from "react-icons/ai";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
@@ -13,8 +12,7 @@ import { TabContext } from "@/context/TabContext";
 
 const RightPart = () => {
     const { theme, setTheme } = useContext(ThemeContext)
-    const { handlePageNumber } = useContext(TabContext)
-    const [show, setShow] = useState(false);
+    const { handlePageNumber, show, setShow } = useContext(TabContext)
     const [particlesContainer, setParticlesContainer] = useState('');
 
     const tabs = tabsData()
