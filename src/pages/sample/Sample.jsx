@@ -32,7 +32,7 @@ const Sample = ({ helmetTitle }) => {
               {item.desc}
             </p>
             <div>
-              <a className={classes.btn} href={item.href} style={{ backgroundColor: theme === 'light' ? 'black' : "white", color: theme === 'light' ? 'white' : "black" }}>
+              <a className={classes.btn} href={item.href} target='_blank' style={{ backgroundColor: theme === 'light' ? 'black' : "white", color: theme === 'light' ? 'white' : "black" }}>
                 مشاهده
               </a>
               <a href={item.github}>
