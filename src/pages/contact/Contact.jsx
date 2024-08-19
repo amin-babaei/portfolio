@@ -3,13 +3,14 @@ import { Helmet } from 'react-helmet-async'
 import emailjs from '@emailjs/browser';
 import classes from './Contact.module.scss'
 import validate from './validate'
-import { Toaster, toast } from 'react-hot-toast';
 import loadimd from '@/assets/loading.gif'
+import Toast from '@/components/Toast';
 const Contact = ({helmetTitle}) => {
 
 const initialState = { name: '', email: '', message: '' }
 const [userData, setUserData] = useState(initialState)
 const [loading, setLoading] = useState(false)
+const [toast, setToast] = useState({ message: '', type: '', visible: false });
 
 const form = useRef();
   const { name, email, message } = userData
@@ -22,18 +23,25 @@ const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault()
     const errMsg = validate(name, email, message)
-    if(errMsg) return toast.error(errMsg)
+    if (errMsg) {
+      setToast({ message: errMsg, type: 'error', visible: true });
+      return;
+    }
 
     setLoading(true)
     emailjs.sendForm(import.meta.env.VITE_SERVICEID, import.meta.env.VITE_TEMPLATEID, form.current, import.meta.env.VITE_PUBLICKEY)
     .then(() => {
-      toast.success('پیام شما با موفقیت ارسال شد')
       setLoading(false)
       setUserData(initialState)
+      setToast({ message: 'ایمیل با موفقیت ارسال شد', type: 'success', visible: true });
     }, (error) => {
-      toast.error('خطایی رخ داد')
       setLoading(false)
+      setToast({ message: 'خطایی رخ داده است، لطفا دوباره امتحان کنید', type: 'error', visible: true });
     });
+  };
+
+  const closeToast = () => {
+    setToast({ ...toast, visible: false });
   };
 
   if(loading) return <div className={classes.loading}><img src={loadimd} alt="loading" /></div>
@@ -43,10 +51,7 @@ const form = useRef();
       <Helmet>
         <title>{helmetTitle}</title>
       </Helmet>
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-      />
+      {toast.visible && <Toast message={toast.message} type={toast.type} visible={toast.visible} onClose={closeToast} />}
         <div className={classes.title}>
             <p className={classes.title__highlight}>تماس با من</p>
             <h2>تماس با من</h2>
