@@ -2,6 +2,7 @@ import classes from './Home.module.scss'
 import profile from '../../assets/profile.jpg'
 import { AiFillGithub, AiFillYahoo, AiFillLinkedin } from 'react-icons/ai'
 import { Helmet } from 'react-helmet-async'
+import resume from '@/assets/amin-babaei-resume.pdf'
 const Home = ({helmetTitle}) => {
   return (
     <section className={classes.section}>
@@ -25,6 +26,7 @@ const Home = ({helmetTitle}) => {
               <AiFillLinkedin size={30} />
             </a>
           </div>
+          <a href={resume} download>دانلود رزومه</a>
         </div>
     </section>
   )
