@@ -1,5 +1,5 @@
-import AppContainers from './containers/AppContainers'
-import './styles/index.scss'
+import AppContainers from '@/containers/AppContainers'
+import '@/styles/index.scss'
 function App() {
 
   return (

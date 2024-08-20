@@ -8,8 +8,8 @@ import { TbBrandJavascript } from 'react-icons/tb'
 import { FaUniversity } from 'react-icons/fa'
 
 import classes from './About.module.scss'
-import about from '../../assets/ab.jpg'
-import resume from '../../assets/amin-babaei-resume.pdf'
+import about from '@/assets/ab1.jpg'
+import resume from '@/assets/amin-babaei-resume.pdf'
 
 const About = ({ helmetTitle }) => {
   const { theme } = useContext(ThemeContext)
@@ -32,7 +32,9 @@ const About = ({ helmetTitle }) => {
           <p>توسعه دهنده وب</p>
         </div>
         <div className={classes.about__text}>
-          <p>سلام من محمد امین بابایی هستم . ساکن مشهد و متولد 6 آذر سال 1382 هستم . از اوایل سال 99 شروع به یادگیری در حوزه برنامه نویسی کردم و بعد مدتی به گرایش وب روی آوردم . به صورت تخصصی روی فرانت ( react , next ) کار میکنم. البته برای انجام پروژه های شخصی که نیاز به api داشتم ، به وسیله express js سمت بکند هم توسعه می دهم</p>
+          <p>
+          سلام! من محمد امین بابایی ، متولد 6 آذر سال 1382 و ساکن مشهد هستم. از اوایل سال 99 به یادگیری برنامه‌نویسی علاقه مند شدم و بعد از مدتی به گرایش وب متمایل شدم. در حال حاضر بصورت تخصصی در زمینه فرانت‌اند (React و Next.js) فعالیت می‌کنم. همچنین، برای پروژه‌های شخصی که به API نیاز دارند، از Express.js برای توسعه بک‌اند استفاده می‌کنم.
+          </p>
         </div>
         <VerticalTimeline layout='2-column-left' lineColor="rgb(156 163 175)">
           <VerticalTimelineElement
@@ -76,7 +78,7 @@ const About = ({ helmetTitle }) => {
             icon={<FaUniversity />}
           >
             <p>
-              computer diploma - Islamic Azad University (now)
+              computer diploma - Islamic Azad University (present)
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
