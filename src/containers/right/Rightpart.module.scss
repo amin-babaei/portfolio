@@ -4,7 +4,6 @@
 .rightpart{
     align-items: center;
     height: 100vh;
-    right: 0;
     padding: 0 100px;
     position: fixed;
     display: flex;
@@ -31,6 +30,7 @@
                 gap: 5px;
                 margin: 30px 0;
                 transition: all 0.2s;
+                width: fit-content;
                 &:hover{
                     letter-spacing: 1.7px;
                     font-weight: bold;
@@ -45,10 +45,15 @@
 }
 @include media(M) {
     .rightpart{
-        right: -100%;
         transition: all 0.2s ease-in;
         width: 100vw;
         padding: 0;
+        &:dir(rtl) {
+            right: -100%;
+        }
+        &:dir(ltr) {
+            left: -100%;
+        }
         .tsparticles{
             canvas{
                 width: 100% !important;
@@ -69,7 +74,10 @@
     }
 }
 @include media(L){
-    .rightpart{
+    :dir(rtl).rightpart{
         padding-right: 40px;
+    }
+    :dir(ltr).rightpart{
+        padding-left: 40px;
     }
 }

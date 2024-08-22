@@ -5,12 +5,14 @@ import classes from './Contact.module.scss'
 import validate from './validate'
 import loadimd from '@/assets/loading.gif'
 import Toast from '@/components/Toast';
-const Contact = ({helmetTitle}) => {
+import { useTranslation } from 'react-i18next';
+const Contact = () => {
 
 const initialState = { name: '', email: '', message: '' }
 const [userData, setUserData] = useState(initialState)
 const [loading, setLoading] = useState(false)
 const [toast, setToast] = useState({ message: '', type: '', visible: false });
+const { t } = useTranslation()
 
 const form = useRef();
   const { name, email, message } = userData
@@ -49,18 +51,18 @@ const form = useRef();
   return (
     <section className={`${classes.section} text`}>
       <Helmet>
-        <title>{helmetTitle}</title>
+        <title>{t("contact__title")}</title>
       </Helmet>
       {toast.visible && <Toast message={toast.message} type={toast.type} visible={toast.visible} onClose={closeToast} />}
         <div className={classes.title}>
-            <p className={classes.title__highlight}>تماس با من</p>
-            <h2>تماس با من</h2>
+            <p className={classes.title__highlight}>{t("contact__title")}</p>
+            <h2>{t("contact__title")}</h2>
         </div>
         <form ref={form} onSubmit={sendEmail} className={`${classes.form} text`}>
-          <input type="text" placeholder='نام شما' name='name' value={name} onChange={handleChangeInput}/>
-          <input type="text" placeholder='ایمیل' name='email' value={email} onChange={handleChangeInput}/>
-          <textarea cols="30" rows="10" placeholder='متن ارسالی را اینجا بنویسید' name='message' value={message} onChange={handleChangeInput}></textarea>
-          <button type='submit'>ارسال</button>
+          <input type="text" placeholder={t("contact__name")} name='name' value={name} onChange={handleChangeInput}/>
+          <input type="text" placeholder={t("contact__email")} name='email' value={email} onChange={handleChangeInput}/>
+          <textarea cols="30" rows="10" placeholder={t("contact__message")} name='message' value={message} onChange={handleChangeInput}></textarea>
+          <button type='submit'>{t("contact__send")}</button>
         </form>
     </section>
   )

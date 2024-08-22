@@ -42,5 +42,21 @@ html {
 
 body {
   font-family: "vazir", "roboto", sans-serif !important;
-  direction: rtl;
+}
+
+.flag {
+  position: fixed;
+  background-color: transparent;
+  border: 0;
+  top: 20px;
+  z-index: 1;
+  padding: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .flag {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
 }

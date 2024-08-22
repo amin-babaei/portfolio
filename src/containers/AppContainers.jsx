@@ -15,16 +15,16 @@ const AppContainers = () => {
       <RightPart />
       <Leftpart>
         <Page pageNumber={pageNumber} index={1}>
-          <Home helmetTitle='امین بابایی'/>
+          <Home/>
         </Page>
         <Page pageNumber={pageNumber} index={2}>
-          <About helmetTitle='درباره من'/>
+          <About/>
         </Page>
         <Page pageNumber={pageNumber} index={3}>
-          <Sample helmetTitle='نمونه کار ها'/>
+          <Sample/>
         </Page>
         <Page pageNumber={pageNumber} index={4}>
-          <Contact helmetTitle='تماس با من'/>
+          <Contact/>
         </Page>
       </Leftpart>
     </section>

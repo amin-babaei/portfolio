@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/context/ThemeContext'
 import { TabProvider } from '@/context/TabContext'
 import '@/styles/index.scss'
 import { HelmetProvider } from 'react-helmet-async'
+import "./i18next"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

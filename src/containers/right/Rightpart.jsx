@@ -9,11 +9,13 @@ import classes from "./Rightpart.module.scss";
 import { ThemeContext } from "@/context/ThemeContext";
 import { tabsData } from "@/constants/tab";
 import { TabContext } from "@/context/TabContext";
+import { useTranslation } from "react-i18next";
 
 const RightPart = () => {
     const { theme, setTheme } = useContext(ThemeContext)
     const { handlePageNumber, show, setShow } = useContext(TabContext)
     const [particlesContainer, setParticlesContainer] = useState('');
+    const { i18n: { language, t } } = useTranslation()
 
     const tabs = tabsData()
     const particlesInit = useCallback(async engine => {
@@ -30,9 +32,9 @@ const RightPart = () => {
     }, [theme, particlesContainer]);
 
     return (
-        <aside className={`${theme} ${classes.rightpart} bgaside`} style={{ right: show && 0 }}>
+        <aside className={`${theme} ${classes.rightpart} bgaside`} style={{right: show && language === 'fa' && 0, left: show && language === 'en' && 0}}>
             <Particles id='tsparticles' className={classes.tsparticles} init={particlesInit} loaded={particlesLoaded} options={Hexagon} width={'75%'} style={{ position: 'absolute', top: 0 }} />
-            <button className={`${theme} text btn-mode`} style={{ background: theme === 'dark' && 'rgb(40 40 40)' }} onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+            <button className={`${theme} text btn-mode`} style={{ background: theme === 'dark' && 'rgb(40 40 40)', left:language ==='en' && '10px'}} onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
                 {theme === 'light' ? <BsFillMoonStarsFill /> : <BsFillSunFill />}
             </button>
             <a className={`btn-mode ${classes.hamburger}`} onClick={() => setShow(!show)}>
@@ -40,7 +42,7 @@ const RightPart = () => {
             </a>
             <div className={`${classes.rightpart__inner} text`}>
                 <div className={classes.logo}>
-                    <h2>توسعه دهنده وب</h2>
+                    <h2>{t("aside__title")}</h2>
                 </div>
                 <div className={classes.menu}>
                     <ul>
@@ -53,7 +55,7 @@ const RightPart = () => {
                     </ul>
                 </div>
                 <footer>
-                    <p className="text">© تمامی حقوق مادی و معنوی این سایت متعلق به محمد امین بابایی است</p>
+                    <p className="text">{t("aside__copyright")}</p>
                 </footer>
             </div>
         </aside>

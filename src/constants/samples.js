@@ -14,8 +14,8 @@ import back from '@/assets/back.png'
 export const realSamples = [
     {
         id:'1',
-        title:"دیوار ( نیاز به vpn )",
-        desc:"توسعه داده شده با : react js _ tailwindcss _ socket.io _ formik _ yup _ react-query _ react-google-recaptcha _ express",
+        title:"دیوار",
+        desc:"react js _ tailwindcss _ socket.io _ formik _ yup _ react-query _ react-google-recaptcha _ express",
         img:divar,
         href:'https://amindivar.vercel.app',
         github:'https://github.com/amin-babaei/divar'
@@ -23,7 +23,7 @@ export const realSamples = [
     {
         id:'2',
         title:"کافی شاپ امین آقا",
-        desc:"توسعه داده شده با : next js _ next-auth _ material ui _ react-hock-form _ email js _ lodash",
+        desc:"next js _ next-auth _ material ui _ react-hock-form _ email js _ lodash",
         img:coffee,
         href:'https://coffeeaminagha.vercel.app',
         github:'https://github.com/amin-babaei/coffeeaminagha'
@@ -31,7 +31,7 @@ export const realSamples = [
     {
         id:'3',
         title:"فروشگاه امین دیجیتال",
-        desc:"توسعه داده شده با : next js _ typescript _ reactbootsrap _ redux toolkit _ querystring _ express _ pwa",
+        desc:"next js _ typescript _ reactbootsrap _ redux toolkit _ querystring _ express _ pwa",
         img:amindigital,
         href:'https://amindigital.netlify.app',
         github:'https://github.com/amin-babaei/amindigital'
@@ -39,7 +39,7 @@ export const realSamples = [
     {
         id:'4',
         title:"xray team",
-        desc:"توسعه داده شده با : react js _ tailwindcss _ formik _ yup _ redux toolkit _ express _ swiper _ twitch api",
+        desc:"react js _ tailwindcss _ formik _ yup _ redux toolkit _ express _ swiper _ twitch api",
         img:xray,
         href:'https://xrayteam.vercel.app',
         github:'https://github.com/amin-babaei/teamXray'
@@ -47,7 +47,7 @@ export const realSamples = [
     {
         id:'5',
         title:"داشبورد ادمین",
-        desc:"توسعه داده شده با : react js _ material ui _ typescript _ graphql _ recharts _ three _ react-dropzone",
+        desc:"react js _ material ui _ typescript _ graphql _ recharts _ three _ react-dropzone",
         img:dashboard,
         href:'https://amin-babaei-dashboard.netlify.app',
         github:'https://github.com/amin-babaei/dashboard'
@@ -82,20 +82,38 @@ export const landingSamples = [
 export const freelancSamples = [
     {
         id:'1',
-        title:"بکند دانشگاه",
-        desc:"مقطع کارشناسی ، 1402/02/01 express _ mongoose",
+        title: {
+            en: "University Backend",
+            fa: "بکند دانشگاه"
+        },
+        desc: {
+            en: "Bachelor's degree, 2023/05/21 express _ mongoose",
+            fa: "مقطع کارشناسی ، 1402/02/01 express _ mongoose"
+        },
         img:back,
     },
     {
         id:'2',
-        title:"گردشگری",
-        desc:"مقطع کاردانی ، 1399/10/25 html _ css",
+        title: {
+            en: "Tourism",
+            fa: "گردشگری"
+        },
+        desc: {
+            en: "Associate degree, 2020/01/15 html _ css",
+            fa: "مقطع کاردانی ، 1399/10/25 html _ css"
+        },
         img:gardesh,
     },
     {
         id:'3',
-        title:"کافی شاپ",
-        desc:"مقطع کاردانی ، 1399/10/25 html _ css",
+        title: {
+            en: "Coffee Shop",
+            fa: "کافی شاپ"
+        },
+        desc: {
+            en: "Associate degree, 2020/01/15 html _ css",
+            fa: "مقطع کاردانی ، 1399/10/25 html _ css"
+        },
         img:cfs,
     },
 

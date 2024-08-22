@@ -10,30 +10,33 @@ import { FaUniversity } from 'react-icons/fa'
 import classes from './About.module.scss'
 import about from '@/assets/ab1.jpg'
 import resume from '@/assets/amin-babaei-resume.pdf'
+import { useTranslation } from 'react-i18next';
 
-const About = ({ helmetTitle }) => {
+const About = () => {
   const { theme } = useContext(ThemeContext)
+  const { t } = useTranslation()
+
   return (
     <section className={`${classes.section} text`}>
       <Helmet>
-        <title>{helmetTitle}</title>
+        <title>{t("about__title")}</title>
       </Helmet>
       <div className={classes.title}>
-        <p className={classes.title__highlight}>درباره من</p>
-        <h2>درباره من</h2>
+        <p className={classes.title__highlight}>{t("about__title")}</p>
+        <h2>{t("about__title")}</h2>
       </div>
       <div className={classes.image__wrapper}>
         <img src={about} alt="" />
-        <a href={resume} download style={{ backgroundColor: theme === 'light' ? 'black' : "white", color: theme === 'light' ? 'white' : "black" }}>دانلود رزومه</a>
+        <a href={resume} download style={{ backgroundColor: theme === 'light' ? 'black' : "white", color: theme === 'light' ? 'white' : "black" }}>{t("home__resume")}</a>
       </div>
       <div>
         <div className={classes.about__title}>
-          <h4>محمد امین بابایی</h4>
-          <p>توسعه دهنده وب</p>
+          <h4>{t("about__name")}</h4>
+          <p>{t("about__job")}</p>
         </div>
         <div className={classes.about__text}>
           <p>
-          سلام! من محمد امین بابایی ، متولد 6 آذر سال 1382 و ساکن مشهد هستم. از اوایل سال 99 به یادگیری برنامه‌نویسی علاقه مند شدم و بعد از مدتی به گرایش وب متمایل شدم. در حال حاضر بصورت تخصصی در زمینه فرانت‌اند (React و Next.js) فعالیت می‌کنم. همچنین، برای پروژه‌های شخصی که به API نیاز دارند، از Express.js برای توسعه بک‌اند استفاده می‌کنم.
+            {t("about__desc")}
           </p>
         </div>
         <VerticalTimeline layout='2-column-left' lineColor="rgb(156 163 175)">
