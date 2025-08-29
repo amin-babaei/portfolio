@@ -17,7 +17,7 @@
 .section{
     @include flexDisplay(center,center,row);
     gap: 20px;
-    height: 100vh;
+    height: 100dvh;
 
     .avatar{
         border-radius: 100%;

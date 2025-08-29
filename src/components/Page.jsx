@@ -10,7 +10,7 @@ const Page = (props) => {
     return (
         <div>
             {pageNumber === index && (
-                <div style={{ minHeight: "100vh", overflow: "hidden" }}>
+                <div style={{ overflow: "hidden" }}>
                     <motion.div
                         variants={boxVariant}
                         initial="hidden"
