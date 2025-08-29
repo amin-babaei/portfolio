@@ -1,6 +1,6 @@
 export const IranFlag = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="75" height="65" viewBox="0 0 32 32">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
         <path fill="#fff" d="M1 11H31V21H1z"></path>
         <path d="M5,4H27c2.208,0,4,1.792,4,4v4H1v-4c0-2.208,1.792-4,4-4Z" fill="#4d9e4a"></path>
         <path d="M5,20H27c2.208,0,4,1.792,4,4v4H1v-4c0-2.208,1.792-4,4-4Z" transform="rotate(180 16 24)" fill="#c92a1d"></path>
@@ -15,7 +15,7 @@ export const IranFlag = () => {
 }
 export const EnglishFlag = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="60" viewBox="0 0 32 32">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
         <rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#071b65"></rect>
         <path d="M5.101,4h-.101c-1.981,0-3.615,1.444-3.933,3.334L26.899,28h.101c1.981,0,3.615-1.444,3.933-3.334L5.101,4Z" fill="#fff"></path>
         <path d="M22.25,19h-2.5l9.934,7.947c.387-.353,.704-.777,.929-1.257l-8.363-6.691Z" fill="#b92932"></path>

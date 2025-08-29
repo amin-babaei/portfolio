@@ -10,7 +10,7 @@ const Home = () => {
   const {i18n: { language }} = useTranslation()
 
   return (
-    <section className={classes.section}>
+    <section className={classes.section} style={{marginTop: language === 'en' ? '15px' : 0}}>
       <Helmet>
         <title>{t("home__fullname")}</title>
       </Helmet>
