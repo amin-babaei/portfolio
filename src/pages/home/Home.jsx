@@ -4,9 +4,10 @@ import { AiFillGithub, AiFillYahoo, AiFillLinkedin } from 'react-icons/ai'
 import { Helmet } from 'react-helmet-async'
 import resume from '@/assets/amin-babaei-resume.pdf'
 import { useTranslation } from 'react-i18next'
-const Home = ({helmetTitle}) => {
+const Home = () => {
 
   const {t} = useTranslation()
+  const {i18n: { language }} = useTranslation()
 
   return (
     <section className={classes.section}>
@@ -14,7 +15,7 @@ const Home = ({helmetTitle}) => {
         <title>{t("home__fullname")}</title>
       </Helmet>
         <div className={classes.avatar}>
-          <div className={classes.image} style={{backgroundImage: `url(${profile})`}}></div>
+          <div className={classes.image} style={{backgroundImage: `url(${profile})`, transform: language === 'en' ? 'scaleX(-1)' : 'none' }}></div>
         </div>
         <div className={`${classes.detail} text`}>
           <h1>{t("home__fullname")}</h1>

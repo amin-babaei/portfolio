@@ -24,6 +24,7 @@
         min-height: 300px;
         min-width: 300px;
         position: relative;
+        filter: grayscale(1);
         .image{
             -webkit-animation: morph 8s ease-in-out 1s infinite;
             animation: morph 8s ease-in-out 1s infinite;
@@ -75,6 +76,10 @@
         .detail{
             @include flexDisplay(unset,center,column);
             margin: 10px 0;
+        }
+
+        .avatar{
+            margin-top: 50px;
         }
     }
 }
